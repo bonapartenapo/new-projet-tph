@@ -1,0 +1,112 @@
+ $blue:#357DED;
+ 
+ .padding_index
+{
+    padding: var(--padding);
+    position: relative;
+    top: -6em;
+}
+
+ /* grand titre et sous titre */
+//  
+
+ .police-titles
+ {
+    line-height: 59px 
+ }
+
+ .taille-sous-titles
+ {
+    font-size: var(--h4);
+    line-height: 29px 
+ }
+
+
+ /* fin grand titre et sous titre */
+
+
+/* premiere partir */
+
+.img-div-index
+{
+    position: relative;
+    top: -18em;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ /* fin de la premier partir */
+
+/* deuxieme partie */
+
+.tof-job-index
+{
+    position:  relative;
+    top: -14em;
+    display: flex;
+    justify-content: center;
+}
+
+ .jobs1,.developeur,.jsobs,.jobs3
+ {
+    font-size: 20px;
+ }
+
+ .jobs1
+ {
+    left: -31em;
+    top: -5em;
+ }
+
+ .developeur
+ {
+    left: -27em;
+    top: -5em;
+ }
+
+
+ .jobs3
+ {
+    left: 36em;
+    top: -9em;
+ }
+ .jobs2
+ {
+    left: 31em;
+    top: -9em;
+ }
+
+ .jobs4
+ {
+   position: relative;
+    left: 2em;
+    top: -2em;
+ }
+
+ .part1
+ {
+   position: absolute;
+   top: -5em;
+   left: -2em;
+   .boy
+   {
+      
+      top: -5em;
+      left: -2em;
+   }
+
+
+ }
+ .new-techno
+ {
+    color: $blue;
+ }
+
+ .color-neuf{
+   color: var(--blue);
+   
+ }
+
+
+
+

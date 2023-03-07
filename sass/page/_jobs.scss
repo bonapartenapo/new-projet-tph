@@ -7,6 +7,26 @@
 //     word-spacing: 50px;
 // }
 
+
+
+
+
+.container-modal
+{
+    display:  none;
+}
+
+.container-modal.active
+{
+    display: block;
+    transition: 0s ;
+}
+
+section
+{
+    padding: 500px;
+}
+
 .text
 {
     position: relative;
@@ -33,74 +53,73 @@
 
 .formulaire
 {
-    padding: 0em 5.5em;
+    padding-top: 20px;
+    padding: 0em 0.;
     display: flex;
-    gap: 2em 2em;
-    align-items: center;
-
-    .expe
-    {
-        position: relative;
-        left: 2em;
-    }
-}
-
-.section2
-{
-    gap: 2em;
-
-}
-
-.child
-{
-    position: absolute;
-    padding: 5rem;
-    display: grid;
-    grid-template-rows: 20em 20em;
-
-    .card-jobs1
-    {
-/*         position: relative;
-        top: -20em; */
-
-        .sous-text
-        {
-            position: relative;
-            line-height: 34px;
-        }
-    }
-
-    .btn-php-angular
-    {
-        display: flex;
-        gap: var(--gap-L1);
-    
-    }
-}
-
-.child2
-{
-    @extend .child;
-    position: relative;  
     justify-content: center;
-  
+    flex-wrap: wrap;
+    gap: 2em 2em;
+
+
+    // .expe
+    // {
+    //     position: relative;
+    //     left: 2em;
+    // }
 }
 
-.child3
-{
-    @extend .child;
-    position: relative;
-    top: -66.5em;
-    justify-content: flex-end;
+
+
+// .child
+// {
+//     position: absolute;
+//     padding: 5rem;
+//     display: grid;
+//     grid-template-rows: 20em 20em;
+
+//     .card-jobs1
+//     {
+// /*         position: relative;
+//         top: -20em; */
+
+//         .sous-text
+//         {
+//             position: relative;
+//             line-height: 34px;
+//         }
+//     }
+
+//     .btn-php-angular
+//     {
+//         display: flex;
+//         gap: var(--gap-L1);
+    
+//     }
+// }
+
+
+// .child2
+// {
+//     @extend .child;
+//     position: relative;  
+//     justify-content: center;
+  
+// }
+
+// .child3
+// {
+//     @extend .child;
+//     position: relative;
+//     top: -66.5em;
+//     justify-content: flex-end;
    
-}
+// }
 
 
 
 .deplacement-text,.sous-text,.grafikart
 {
-    position: relative;
-    left: 17px;
+    padding: 20px;
 }
 
 .child4
@@ -160,27 +179,27 @@
 }
 
 
-.top-btn-child4
-{
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    top: -10em;
-    align-items: center;
-    left: -8em;
-}
+// .top-btn-child4
+// {
+//     display: flex;
+//     justify-content: flex-end;
+//     position: relative;
+//     top: -10em;
+//     align-items: center;
+//     left: -8em;
+// }
 
 
-.child5
-{
-    padding: 5em;
-    position: relative;
-    top: -8em;
-    display: flex;
-    justify-content: space-around;
-    gap: 3em;
+// .child5
+// {
+//     padding: 5em;
+//     position: relative;
+//     top: -8em;
+//     display: flex;
+//     justify-content: space-around;
+//     gap: 3em;
 
-}
+// }
 
 
 

@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="file:///c:/Users/Meliodas/Desktop/site-tph/mon%20projet/tph-code/" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <base href="file:///C:/Users/lx/Desktop/Nouveau%20dossier/new-projet-tph/" />
     <link rel="stylesheet" href="sass/main.css">
-
+    <script src="js/jobs.js" defer></script>
 </head>
-<body>
+
+<body class= "bg-gray-400">
     <!-- partir entête -->
-<header class="header">
-        <div class="header-dashed">
+    <div class="container-modal fixed text-black w-full h-full z-50">
+        
+        <div class=" text-link-head flex-col bg-white w-2/4 h-3/5 overflow-auto flex justify-center items-center rounded" 
+            style=" 
+            position: absolute;
+            left: 50%; 
+            top: 50%; 
+            transform: translate(-50%, -50%);
+            transition: opacity 0.4s ease-out;
+            transform: 0.4s ease-out;">
             
-            <img class = "img-tph" src="img/icone-logo/header/tph.jpg">
-            <button class="btn btn-text btn-secondary">Explorer</button>
+            <div class=""><button class="modal-trigger relative  bg-red-600 text-white text-2xl rounded p-2 ">X</button></div>
+                
+                    <a href="page/index.html" class ="home">Home</a>
+                    <a href="page/jobs.html" class ="jobs">jobs</a>
+                    <a href="page/tutoriel.html" class ="color-tutoriels tutoriels">tutoriel</a>
+                    <a href="#" class ="coaching">coaching</a>
+                    <a href="page/profil.html" class ="contact">contact</a>
+
+           
+        </div>
+    </div>
+<header class="header">
+    <div class="header-dashed">
+        
+        <img class="img-discord" src="img/icone-logo/header/discord.png">
+
+            <div class="md:p-10"><button class="modal-trigger btn btn-text btn-secondary hidden md:block ">Explorer</button></div>
 
         <div class="link-header">
-        <nav class="text-link-head">
+        <nav class="text-link-head hidden  md:flex md:p-14">
             <a href="page/index.html" class ="home">Home</a>
             <a href="page/jobs.html" class ="jobs">jobs</a>
             <a href="page/tutoriel.html" class ="color-tutoriels tutoriels">tutoriel</a>
@@ -26,14 +51,21 @@
        
         </nav>
         </div>
-            <img class="img-discord" src="img/icone-logo/header/discord.png">
+        <img class = "hidden lg:block pt-4 w-20 h-20" src="img/icone-logo/header/tph.jpg">
+        <button class="modal-trigger w-20 h-16 md:hidden">
+            <img src="https://raw.githubusercontent.com/Ziratsu/tailwind-responsive-navbar/88e7fbc840453d42e64fbccceacf468db3f14aa2/1.Starter/images/menu.svg" alt="">
+        </button>
+
         </div>
 </header>
+
+<!-- //fenetre modal -->
+
 
     
 <!-- debut du select -->
 
-<form action="" class="formulaire">
+<form action="" class="formulaire mb-12">
     <select name="langue" class="text-select select-primary">
        <option value="">Francais</option>
        <option value="">Anglais</option>
@@ -45,9 +77,9 @@
        <option value="">audio</option>
     </select>
 
-    <input type="text" placeholder="Recherchez un job" class="input-jobs text-input text">
+    <input type="text" placeholder="Recherchez un job" class="input-jobs text-input text w-44 md:w-96">
 
-    <select name="experience" class="text-select select-primary expe">
+    <select name="experience" class="text-select select-primary relative left-9">
         <option value="">experience</option>
         <option value="">audio</option>
     </select>
@@ -55,27 +87,26 @@
 
 <!-- fin du select -->
 <!-- debut du premier child -->
-<section class="section2">
-    <div class="child">
-        <div class="card-jobs1 card depla-part">
-            <img src="img/icone-logo/cercle.png" class="img-cercle">
-            <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
+<section class="section2 grid gap-y-8 gap-x-10 mx-auto max-w-6xl p-20 grid-cols-1 lg:max-w-7xl  md:grid-cols-2 lg:grid-cols-3 ">
+    <div class="reveal  card-jobs1 card depla-part">
+        <img src="img/icone-logo/cercle.png" class="img-cercle">
+        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
             Cameroun-Yaounde-Bastos <br>
-        <div class="btn-php-angular">
-            <div>
-                <button class=" btn-text btn-primary">Angular</button>
+            <div class="btn-php-angular">
+                <div>
+                    <button class=" btn-text btn-primary">Angular</button>
+                </div>
+                <div>
+                    <button class=" btn-text btn-primary ">php</button><br>
+                </div>
             </div>
-            <div>
-                <button class=" btn-text btn-primary ">php</button><br>
-            </div>
-        </div>
             Il y'a 5 jours. Remote <br>
             55k-85k<br>
         </div>
     </div>
 
-    <div class="card-jobs1 card depla-part">
+    <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/cercle.png" class="img-cercle">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
@@ -93,7 +124,7 @@
         </div>
     </div>
     
-    <div class="card-jobs1 card depla-part">
+    <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/cercle.png" class="img-cercle">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
@@ -110,26 +141,74 @@
             55k-85k<br>
         </div>
     </div>
-    </div>
 
-    <!-- fin du premier child -->
-
-    <!-- debut du second child -->
-
-    <div class="child2">
-    <div class="card-jobs1 card depla-part">
+    <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/flower.png" class="img-flower">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
             Cameroun-Yaounde-Bastos <br>
-        <div class="btn-php-angular">
-            <div>
-                <button class=" btn-text btn-primary">Angular</button>
+            <div class="btn-php-angular">
+                <div>
+                    <button class=" btn-text btn-primary">Angular</button>
+                </div>
+                <div>
+                    <button class=" btn-text btn-primary ">php</button><br>
+                </div>
             </div>
-            <div>
-                <button class=" btn-text btn-primary ">php</button><br>
-            </div>
+            Il y'a 5 jours. Remote <br>
+            55k-85k<br>
         </div>
+    </div>
+    
+    <div class="reveal card-jobs1 card depla-part">
+        <img src="img/icone-logo/flower.png" class="img-flower">
+        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
+        <div class="sous-text">
+            Cameroun-Yaounde-Bastos <br>
+            <div class="btn-php-angular">
+                <div>
+                    <button class=" btn-text btn-primary">Angular</button>
+                </div>
+                <div>
+                    <button class=" btn-text btn-primary ">php</button><br>
+                </div>
+            </div>
+            Il y'a 5 jours. Remote <br>
+            55k-85k<br>
+        </div>
+    </div>
+    
+    <div class="reveal card-jobs1 card depla-part">
+        <img src="img/icone-logo/flower.png" class="img-flower">
+        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
+        <div class="sous-text">
+            Cameroun-Yaounde-Bastos <br>
+            <div class="btn-php-angular">
+                <div>
+                    <button class=" btn-text btn-primary">Angular</button>
+                </div>
+                <div>
+                    <button class=" btn-text btn-primary ">php</button><br>
+                </div>
+            </div>
+            Il y'a 5 jours. Remote <br>
+            55k-85k<br>
+        </div>
+    </div>
+
+    <div class="reveal card-jobs1 card depla-part">
+        <img src="img/icone-logo/flower.png" class="img-flower">
+        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
+        <div class="sous-text">
+            Cameroun-Yaounde-Bastos <br>
+            <div class="btn-php-angular">
+                <div>
+                    <button class=" btn-text btn-primary">Angular</button>
+                </div>
+                <div>
+                    <button class=" btn-text btn-primary ">php</button><br>
+                </div>
+            </div>
             Il y'a 5 jours. Remote <br>
             55k-85k<br>
         </div>
@@ -152,70 +231,9 @@
             55k-85k<br>
         </div>
     </div>
-    
-    <div class="card-jobs1 card depla-part">
-        <img src="img/icone-logo/flower.png" class="img-flower">
-        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
-        <div class="sous-text">
-            Cameroun-Yaounde-Bastos <br>
-            <div class="btn-php-angular">
-                <div>
-                    <button class=" btn-text btn-primary">Angular</button>
-                </div>
-                <div>
-                    <button class=" btn-text btn-primary ">php</button><br>
-                </div>
-            </div>
-            Il y'a 5 jours. Remote <br>
-            55k-85k<br>
-        </div>
-    </div>
-    </div>
-    <!-- fin de la deuxieme partie -->
 
-    <!-- debut de la troisieme partir -->
-    <div class="child3">
-    <div class="card-jobs1 card depla-part">
-        <img src="img/icone-logo/flower.png" class="img-flower">
-        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
-        <div class="sous-text">
-            Cameroun-Yaounde-Bastos <br>
-            <div class="btn-php-angular">
-                <div>
-                    <button class=" btn-text btn-primary">Angular</button>
-                </div>
-                <div>
-                    <button class=" btn-text btn-primary ">php</button><br>
-                </div>
-            </div>
-            Il y'a 5 jours. Remote <br>
-            55k-85k<br>
-        </div>
-    </div>
-    
-    <div class="card-jobs1 card depla-part">
-        <img src="img/icone-logo/flower.png" class="img-flower">
-        <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
-        <div class="sous-text">
-            Cameroun-Yaounde-Bastos <br>
-            <div class="btn-php-angular">
-                <div>
-                    <button class=" btn-text btn-primary">Angular</button>
-                </div>
-                <div>
-                    <button class=" btn-text btn-primary ">php</button><br>
-                </div>
-            </div>
-            Il y'a 5 jours. Remote <br>
-            55k-85k<br>
-        </div>
-    </div>
-    </div>
+</section>
 
-    </div>
-
-
-<div class="child4">
     <div class="top-child4">
         <aside class="depla-title-child4">
             <h1  class="title-child4">Envie d’etre notifié  de tous les futur jobs ? </h1>
@@ -231,13 +249,9 @@
             <a href="page/tutoriel.html"><button class="btn btn-text btn-secondary btn-v-tuto">Visiter les Turoriels</button></a>
         </div>
     </div>
-
-
-    <!-- 4em partir -->
-
     
-<div class="child5">
-    <div class="card-jobs1 card depla-part">
+<section class="grid gap-y-8 gap-x-10 mx-auto max-w-6xl p-20 grid-cols-1 lg:max-w-7xl  md:grid-cols-2 lg:grid-cols-3">
+   <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/flower.png" class="img-flower">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
@@ -255,7 +269,7 @@
         </div>
     </div>
     
-    <div class="card-jobs1 card depla-part">
+    <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/flower.png" class="img-flower">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
@@ -273,7 +287,7 @@
         </div>
     </div>
     
-    <div class="card-jobs1 card depla-part">
+    <div class="reveal card-jobs1 card depla-part">
         <img src="img/icone-logo/flower.png" class="img-flower">
         <h3 class=" deplacement-text">Développeur full stack à Gohze</h3>
         <div class="sous-text">
@@ -290,9 +304,8 @@
             55k-85k<br>
         </div>
     </div>
-</div>
 </section>
-</div>
+
 
 <footer class="footer-profile">
     <aside class="card-footer-profile">

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html
+{
+    @apply p-0 m-0
+}
+*{
+    @apply box-border
+}
+
+.modal
+{
+    @apply fixed top-0 left-0 w-full h-full  p-10 bg-gray-500 flex justify-center items-center;
+    animation: fadeIn .3s both; 
+}
+
+.js-modal
+{
+    @apply text-xl font-bold text-blue-500 
+}
+h1
+{
+    @apply font-bold text-2xl 
+}
+
+.modal-wrapper{
+    @apply  p-5 bg-white h-96 overflow-auto;
+    width: 600px;
+    max-width: calc(100vw -20px);
+    animation: slideFromTop .8s both; 
+}
+
+.modal[aria-hidden = "true"]
+{
+    animation-name: fadeOut;
+}
+.modal[aria-hidden = "true"], .modal-wrapper
+{
+    animation-name: slideToBottom;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@keyframes slideFromTop {
+    from {transform: translateY(-50px);}
+    to {transform: translateY(0px);}
+}
+@keyframes slideToBottom {
+    from {transform: translateY(0px);}
+    to {transform: translateY(50px);}
+}

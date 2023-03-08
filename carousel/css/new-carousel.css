@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    @apply m-0 flex items-center justify-center bg-cover;
+    min-height: 100vh;
+    background-image: url("https://www.dz-techs.com/wp-content/uploads/2017/01/PICOGRAPHY-DzTechs.jpg.webp");
+
+}
+
+#droit
+{
+    @apply absolute w-10 h-10 left-0 opacity-80;
+    top: 160px;
+    transition: all 0.3s ease;
+}
+
+.photo
+{
+    width: 800px;
+    display: inline-block; /*on maintien les elt sur la mm ligne*/
+    height: 400px;
+    background-size: cover;
+}
+
+#droit:hover
+{
+    transform: scale(1.1);
+    opacity: 100;
+    transition: all 0.3s ease;
+}
+
+#gauche
+{
+    @apply absolute w-10 h-10 right-0 opacity-80;
+    top: 160px;
+    transition: all 0.3s ease;
+}
+
+#gauche:hover
+{
+    transform: scale(1.1);
+    opacity: 100;
+    transition: all 0.3s ease;
+}
+
+#carousel
+{
+    width: 800px;
+    height: 400px;
+    border: solid;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+

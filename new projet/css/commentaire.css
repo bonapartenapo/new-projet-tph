@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.modal
+{
+    @apply fixed w-full h-full invisible z-50 mx-auto
+}
+.modal.active
+{
+    @apply visible
+}
+
+.modal-text
+{
+    @apply bg-white w-96 h-96;
+    overflow: auto;
+    position:  absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-close
+{
+    @apply float-right mb-5
+}
+
+.overlay
+{
+    @apply w-full h-full bg-gray-600
+}
+
+.btn-overlay
+{
+    @apply fixed flex justify-center items-center mt-5 
+}
+
+button
+{
+    @apply text-3xl bg-red-600 rounded  text-white p-2 cursor-pointer
+}
+
+.alert {
+    @apply bg-red-500 #{!important};
+  }

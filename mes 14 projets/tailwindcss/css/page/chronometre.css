@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.body-chrono
+{
+    @apply m-0 p-0 box-border flex justify-center items-center bg-green-500 min-h-screen;
+    font-family: 'Roboto', sans-serif;
+    
+    /* on centre avec la position absolut
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    
+}
+
+.chronometre
+{
+    @apply bg-white rounded p-2.5 text-center;
+    width: 500px;
+}
+.tim
+{
+    @apply m-auto w-full border-solid font-bold text-3xl border rounded
+           mb-5 border-gray-500 px-1.5
+}
+.tim span
+{
+    @apply p-1.5; 
+    font-family: 'Dancing Script', cursive;
+}
+
+.controls
+{
+    @apply flex w-full justify-between
+}
+
+.btn-chrono
+{
+    @apply bg-green-400 text-white text-lg px-8 py-2 rounded w-1/4 cursor-pointer duration-300
+}
+
+.btn-chrono:hover
+{
+    transform: scale(0.9); /*permet de creer un mouvement sur le btn lorsqu'on passe le curseur dessu*/
+}

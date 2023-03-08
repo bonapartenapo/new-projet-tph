@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../tailwind/dist/commentaire.css">
+    <script src="../script/comment.js"></script>
+</head>
+<body>  
+
+    <div class="comments"></div>
+
+    <template id="comment">2
+        <article class="mb-4">
+            <div class="mb-1"><strong class="js-username">John Doe</strong></div>
+            <p class="js-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. sint ea vel et illo nostrum. Iusto nostrum odio cum.</p>
+        </article>
+    </template>
+
+    <div
+        data-endpoint ="https://jsonplaceholder.typicode.com/comments?_limit=10"
+        data-template ="#comment"
+        data-target=".comments"// tout ce qui va etre charger depuis l api va enter dans la div qui a la classe comments
+        data-elements ='{"name": ".js-username", "body": ".js-content"}'
+        class="text-center js-infinite-pagination">
+        <div class="spinner-border" role="status"></div>
+    </div>
+   
+    <div class="btn-overlay ">
+        <button class="modal-trigger">ok</button>
+    </div>
+
+    <div class="modal">
+        <div class="overlay modal-trigger"></div>
+
+        <div class="modal-text">
+            <div class="btn-close"><button class="close-modal modal-trigger">X</button></div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolor repudiandae labore quaerat laboriosam! Explicabo consequuntur cupiditate consequatur suscipit reprehenderit corrupti sint quidem! Deserunt nihil, doloribus possimus commodi velit dolores!
+            Rerum nostrum sit eum earum, harum odit asperiores excepturi totam culpa fuga corporis quas delectus fugiat iure, porro officiis autem quisquam pariatur velit ex voluptatem sint magni? Debitis, odit aperiam.
+            Culpa atque sit assumenda qui similique magni, cum non ullam accusantium numquam, suscipit, iusto impedit. Laudantium rerum amet aliquid ad consectetur, numquam asperiores quisquam, quae deserunt accusantium, ipsum error dicta?
+            In, rem suscipit iure blanditiis atque ut quisquam ratione architecto? Laboriosam eveniet reiciendis impedit voluptatum soluta alias reprehenderit obcaecati quae veniam. Dolorum vitae, et iure accusamus cumque soluta odit voluptate?
+            Labore vel nulla eaque atque nam quibusdam quaerat cumque magnam delectus repudiandae! Ipsum aliquam minus, vero animi nemo temporibus nihil ipsam pariatur natus velit beatae nisi sequi cum placeat enim.
+        </div>
+
+    </div>
+
+    <div class="alert">
+        meliodas
+    </div>
+</body>
+</html>

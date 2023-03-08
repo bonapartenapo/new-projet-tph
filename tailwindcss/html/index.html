@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <link rel="stylesheet" href="../dist/index.css">
+
+</head>
+<body class="bg-gray-200 flex justify-center h-full items-center">
+    <div class ="login-card">
+        <!-- md-:flex est appliquer lorsque l'ecrant est superieur a 720 -->
+        <img src="https://picsum.photos/id/1047/200/300" class="flex-1 w-full h-40 md:h-full object-cover">
+        <!-- w-full permet de faire occuper la totaliter de l'img sur une zone -->
+        <!-- objct-cover permet  d'empecher le deformement d'une img; h-40(40 = 1rem) permet de gerer la hauteur de l'inmg -->
+       
+        <div class="p-4 flex-1 md:flex md:flex-col justify-center">
+            <!-- md:flex-col met les elements en colonne sur une largeur > 720 -->
+            <!-- p-4(1 rem) permet de gerer l'espacement -->
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">connexion</h1>
+            <div class="mb-4">
+                <!-- m-4 permet de gerer la marge, mb-4 permet de gerer la marge du bas -->
+                <label for="username" class="block text-gray-600">nom d'utilisateur</label>
+                <input type="text" id="username" name ="username" class="input">
+                <!-- px-3 gere l'espace en haut py-2 gere l'espace sur les coter  -->
+            </div>  
+
+            <div class="mb-4">
+
+                <label for="username" class="block text-gray-600">Mot de passe</label>
+                <input type="password" id="username" name ="username" class="input">
+            </div>
+
+            <button type="submit" class="btn">Se connecter</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>

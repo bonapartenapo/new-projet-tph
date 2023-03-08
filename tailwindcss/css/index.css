@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+    .input
+    {
+        @apply border shadow-inner py-2 px-3 text-gray-700 w-full;
+    }
+    
+    .btn
+    {
+        @apply bg-blue-500 text-white px-4 py-3 rounded;
+    }
+    .btn:hover
+    {
+        @apply bg-blue-600;
+    }
+
+    .login-card
+    {
+        @apply bg-white shadow-xl max-w-xl w-auto;
+    }
+
+    @screen md
+    {
+        .login-card
+        {
+            @apply flex;
+        }
+    }
+
+
+ 

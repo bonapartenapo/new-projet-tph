@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../tailwind/dist/menu.css">
+    <script src="../script/menu.js" defer></script>
+</head>
+<body class="">
+
+    <div class="modal-container">
+        <div class="overlay modal-trigger"></div>
+    
+            <div class="modal">
+                <button class="close-modal modal-trigger">X</button>
+                <ul id="toggled-menu"
+                class=" w-full absolute left-0 border-gray-200 flex flex-col items-center justify-center  text-blue-900">
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#cv" class="w-full text-sm font-semibold uppercase hover:text-rose-600">CV
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#competences" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Comptences
+                    </a>
+                </li>
+    
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="../tailwindcss/html/todoList.html" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Tache
+                    </a>
+                </li>
+    
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#contact" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Contact
+    
+                    </a>
+                </li>
+                </ul>
+            </div>
+    </div>
+
+
+    <header class="header">
+        <!-- fixed is use to do stay the nav-bar always(toujour) in top when we scroll  it is accompagnied by top-0
+             z-50 is use so that(pour que) the nav-bar is always above the others -->
+    
+    <nav id="main-nav">
+        <a href="#top" class="flex"
+            aria-label ="portofolio home page">
+                <img
+                    src="https://raw.githubusercontent.com/Ziratsu/tailwind-responsive-navbar/main/1.Starter/images/logo.png">
+                    <span
+                        aria-hidden="true"
+                        class="text-lg lg:text-xl">
+                        Jane <strong>C <span class="text-rose-600">.</span></strong>
+                    </span>
+            </a>
+            <button
+                aria-label="toggle button"
+                aria-expanded="false"
+                id="menu-btn"
+                class="modal-trigger"
+            >
+            <img src="https://raw.githubusercontent.com/Ziratsu/tailwind-responsive-navbar/88e7fbc840453d42e64fbccceacf468db3f14aa2/1.Starter/images/menu.svg" alt="">
+            
+            </button>
+            <ul id="toggled-menu"
+                class="w-full absolute top-full left-0 -translate-y-full   border-b border-gray-200 flex flex-col items-center md:static md:z-10 md:w-min md:transform-none md:border-none md:flex-row font-bold text-blue-900 z-auto">
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#cv" class="w-full text-sm font-semibold uppercase hover:text-rose-600">CV
+                    </a>
+                </li>
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#competences" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Comptences
+                    </a>
+                </li>
+            
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="./todoList.html" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Tache
+                    </a>
+                </li>
+            
+                <li class="py-4 md:py-0 md:mr-6">
+                    <a href="#contact" class="w-full text-sm font-semibold uppercase hover:text-rose-600">Contact
+            
+                    </a>
+                </li>
+            </ul>
+     
+    </nav>     
+        
+    </header>
+
+<nav class="nav-bar">  
+    <div id="container">
+    </div>
+    <div class="text-img">
+        <h1 class="reveal-1">MEILLEURES VENTES</h1>
+        <p class="reveal-2"> Nos produits les plus populaires selon les ventes. Mises à jour chaque heure.</p>
+    </div>  
+    <!-- <img src="img/chaussre.png" alt=""  class="m-0"> -->
+    <div class="direction">
+        <img id ="gauche" id="gauche" src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/direction-left-position-icon.svg" alt="">
+        <img id="droit" src="https://uxwing.com/wp-content/themes/uxwing/download/arrow-direction/direction-right-position-icon.svg" alt="">
+    </div>
+</nav>
+    <h1 class="">
+        Customisation faite a la main
+    </h1>
+
+<section class=" ">
+        <div class="reveal-2">
+                <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+                
+                <div class="p-4">
+                    <div class="flex mb-5">
+                        <img src="../img/cercle.jpg" alt="" class="cerlce">
+                        
+                        <p class="poubelle">
+                            <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                        </p>
+                    </div>
+                    <div class="mb-5">
+                        <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                        <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                        <p class="ml-5">650 €</p>
+                    </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="star1"></div>
+                    <img src="../img/etoile.jpg" alt="" class="star1">
+                    <img src="../img/etoile.jpg" alt="" class="star1">
+                </div>
+            </div>
+
+        </div>
+        <div class="reveal-2">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="cercle">
+
+                    <p class="mt-1 ml-auto text-xl font-bold text-gray-900">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+        <div class="reveal-2 ">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="mt-1 ml-auto text-xl font-bold text-gray-900">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+        <div class="reveal-2">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="mt-1 ml-auto text-xl font-bold text-gray-900">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+            
+        </div>
+        <div class="reveal">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="poubelle">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-white shadow reveal">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="poubelle">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+                
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-white shadow reveal">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="poubelle">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-white shadow reveal">
+            <img src="../img/shoose.jpg" alt="tof" class="shoose1">
+            
+            <div class="p-4">
+                <div class="flex mb-5">
+                    <img src="../img/cercle.jpg" alt="" class="w-2 h-6 ml-5">
+
+                    <p class="poubelle">
+                        <img src="../img/poubelle-2.png" alt="" class="w-5 h-6 ml-5">
+                    </p>
+                </div>
+                <div class="mb-5">
+                    <h1 class="max-w-2xl ml-5 text-2sm font-poppins">NIKE 700 XXX</h1>
+                    <p class="ml-5 mb-5 md:max-w-2xl text-[24px]">un editeur de performance je te le recommande fortement</p>
+                    <p class="ml-5">650 €</p>
+                </div>
+
+                <div class="flex gap-x-2">
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <div><img src="../img/etoile.jpg" alt="" class="etoile"></div>
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                    <img src="../img/etoile.jpg" alt="" class="etoile">
+                </div>
+            </div>
+
+        </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+*
+{
+    @apply m-0 p-0 box-border
+}
+
+body{
+    @apply bg-cover;
+    background-image: url('https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+}
+
+li button
+{
+    @apply w-10 h-10 float-right p-1 leading-5 mr-3 
+
+}
+
+.container
+{
+    @apply relative max-w-3xl p-10 m-auto
+}
+
+.addTask
+{
+    @apply w-full flex p-10
+}
+
+.addTask > input[type = "text"]
+{
+    @apply text-2xl text-white  border-b-2 p-2 outline-none  bg-none;
+
+    width: 90%;
+    background: none; /*permet de retirer le bg de l'input*/
+    border-bottom: 2px solid #666;
+
+
+}
+
+.addTask button
+{
+    @apply my-0 rounded bg-gray-700 p-5 text-white text-2xl uppercase  border-none outline-none
+    /*uppercase permet de mettre le texte en majuscule, lowercase permet de mettre le texte
+        en minuscule et capitalize permet de mettre les premiere lettres de chaque mots en majuscules*/
+}
+
+.notCompleted, .completed
+{
+    @apply mx-5 p-10
+}
+
+h3
+{
+    @apply text-3xl font-bold text-white text-center mb-2 uppercase font-serif
+
+}
+
+ol{
+    @apply list-none;
+
+    counter-reset: my-counter;
+
+
+}
+
+ol li{
+    @apply w-full p-5 mx-2 bg-red-400 text-3xl capitalize font-serif mb-4;
+  
+    
+    counter-increment: my-counter
+}
+
+ol.completed li{
+    @apply bg-purple-300
+}
+
+@layer components
+{
+    ol li::before
+    {
+        content: counter(my-counter);
+        @apply inline-block w-10 h-10 rounded-full bg-fuchsia-600 text-center
+              text-white leading-8 mr-2;
+    }
+}
+
+
+.p-style
+{
+    @apply w-full p-5 mx-2 bg-red-400 text-3xl capitalize font-serif mb-4;
+}

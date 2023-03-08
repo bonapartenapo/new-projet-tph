@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type ="module">
+        /*
+        exercice palindrome
+      function isPalindrome(word)
+      {
+        
+        const reverseword = word
+            .split('') // on explose les mots en tableau
+            .reverse('') // on inverse les lettres des mot
+            .join('') // on colle les lettre de chaque mots
+
+        return word.toUpperCase() === reverseword.toUpperCase()
+      }
+           
+
+      const words =
+      {
+            kayak: true,
+            SOS: true,
+            kayak: true,
+            Bonjour: false
+      }
+
+      for(let word in words) {
+        if(isPalindrome(word) !== words[word])
+        {
+            console.error(`isPalindrome(${word}) au `)
+        }
+      }
+      */
+
+
+      /*exercice calcule moyenne eleve
+    
+    //    const moyenne = (notes) =>
+    //    {
+    //     let somme = 0
+      
+    //     for(let note of notes)
+    //     {
+    //         somme += note
+            
+    //     }
+
+    //     let moyenne = somme / notes.length
+
+    //     return(`${moyenne}`)
+    //   }
+
+    //   const compareStudent = (a, b) =>
+    //   {
+    //     return b.moyenne - a.moyenne
+    //   }
+
+    //   for(let student of students)
+    //   {
+    //     student.moyenne = moyenne(student.notes)
+    //   }
+      
+
+    //   students.sort(compareStudent)
+    //   console.log(students)
+
+*/
+    
+
+//les classes
+
+    // class student
+    // {
+    //     ecole = "jules ferry"
+
+    //     constructor(firstname, lastname){
+    //         this.firstname = firstname
+    //         this.lastname = lastname
+            
+    //     }
+
+    //     setNotes (notes)
+    //     {
+    //        this.notes = notes
+    //     }
+
+    //     canPass()
+    //     {
+    //        return moyenne (this.notes) >= 10
+    //     }
+    // }
+
+    // const melio = new student("ebene", "delio")
+    // const savitar = new student("svitar", "delio")
+    // melio.setNotes =([10,13.9])
+    // savitar.setNotes =([0,10.9])
+    // console.log(melio.canPass(), savitar.canPass())
+/*exercice sur les classes
+
+
+    
+    class Rectangle
+    {
+        constructor(witdh, height)
+        {
+            this.witdh = witdh
+            this.height =height
+        }
+            get perimeter (){
+                return (this.witdh + this.height) * 2
+            }
+            get isValid ()
+            {
+                return this.witdh > 0 && this.height > 0
+            }
+
+            isBiggerThan(shape)
+            {
+                return this.perimeter > shape.perimeter
+            }
+        
+    }
+
+    class square extends Rectangle // on use extends pour utiliser les proprieter de  la class Rectangle
+    {
+        constructor(width)
+        {
+            super(width, width)
+        }
+    }
+    const r = new Rectangle(10, 20);
+    console.log(r.perimeter)
+    console.log(r.isValid)
+
+    const r2 = new Rectangle(-10, 20);
+    console.log(r2.isValid)
+
+    const c = new square(10);
+    console.log(c.perimeter)
+    console.log(c.isBiggerThan(r))
+
+//exo gestion library livre
+
+class Book
+{
+    #page = 1
+    
+
+    constructor(title, pages)
+    {
+        this.title = title
+        this.pages = pages
+    }
+
+    get page()
+    {
+        return this.#page
+    }
+
+     nextPage()
+    {
+        if(this.#page < this.pages)
+        {
+            this.#page++
+        }
+    }
+
+    close()
+    {
+        this.#page = 1
+    }
+}
+
+class Library
+{
+    #books = []
+
+    addbook(book)
+    {
+        this.#books.push(book)// push permet d'ajouter un livre au tableau books
+    }
+
+    addbooks(books)
+    {
+        for(let book of books)
+        {
+            this.addbook(book)
+        }
+    }
+    findBooksByLetter(letter)
+    {
+        const found = []
+        for(let book of this.#books)
+        {
+            if(book.title[0].toLowerCase() === letter.toLowerCase)
+            {
+                found.push(book)
+            }
+        }
+        return found
+    }
+}
+
+const b = new Book('Seigneur des anneaux', 200)// en param nous avons le nom du livre et le nombre de page du livre
+console.log(b.page)
+b.nextPage()
+console.log(b.page)
+b.close()
+console.log(b.page)
+
+const l = new Library();
+l.addbook(b)
+l.addbooks([
+    new Book('Ready player one', 100),
+    new Book('oui-oui', 10),
+    new Book('sillage', 50)
+])
+
+console.log(l.findBooksByLetter('S'))
+   
+*/
+
+
+/* sucre synstaxique
+
+    const double = n => n * 2
+    console.log(double(3))
+
+    const nbre_pair = n => 
+    {
+        return n % 2 === 0
+    }
+
+    a = nbre_pair(4)
+    b = a || false // b recoit true ssi a le nbre est pair et false ssi le nbre est impaire
+    console.log(b)
+
+    const person = {
+        firstname: 'melio',
+        age: 18
+    }
+    console.log(person?.firstname.age?.toString())
+
+    const {firstname, lastname,age} = 
+    {
+        firstname: 'melio',
+        lastname: 'ebene',
+        age: 10
+    }
+
+    console.log(age >= 18? 'majeur' :'mineur' )// ca c'est le ternaire. si l'age est >= a 18 alors il est majeur sinon il es mineur
+*/
+
+/* les times
+
+    let i =  0
+    setInterval(() =>
+    {
+        i++
+        console.log('bonjour')
+        if(i >= 5){
+            clearInterval(t )
+        }   
+    },1000)*/
+
+
+
+    /*les prommesse
+
+    const p = new Promise((resolve, reject) => 
+    {
+        resolve(4)
+    })  
+
+    const wait = duration =>
+    {
+        return new Promise((resolve, reject) =>{
+            setTimeout(() =>{
+            resolve(duration)
+        },duration)
+
+        })
+    }
+
+    const waitAndFail = duration =>
+    {
+        return new Promise((resolve, reject) =>{
+            setTimeout(() =>{
+            reject(duration)
+        },duration)
+
+        })
+    }
+
+    const main = async () => {
+        await wait(2000)
+        console.log('bonjour')
+        await wait(1000)
+        console.log('meliodas')
+
+
+    }
+    main()
+
+    // wait(2000)
+    //     .then(() =>{
+    //         console.log('attend 2s')
+    //         return wait(1000)
+    // })
+    // .then(() =>{
+    //     console.log('attente 1s')
+    // })
+    */
+
+    /*import {sum} from '../js/array.js'
+    
+    console.log(sum([12,13,9]))*/
+
+    function addDays (date, day)
+    {
+        const newDate = new Date(date.getTime())
+        newDate.setDate(newDate.getDate() + day)
+        return newDate
+    }
+    const today = new Date();
+    const tomorrow = addDays(today, 1)
+
+    console.log(today)
+    console.log(tomorrow)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

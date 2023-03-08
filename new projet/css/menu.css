@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-image: url('https://images.unsplash.com/photo-1533460004989-cef01064af7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+}
+
+header
+{
+  @apply  z-50 w-full shadow
+}
+
+header > img
+{
+  @apply hidden md:w-7 md:inline md:mr-4
+}
+
+header > nav
+{
+  @apply flex items-center justify-between max-w-5xl p-6 mx-auto bg-green-100 opacity-90 
+}
+header nav > button
+{
+  @apply cursor-pointer w-7 md:hidden
+}
+h1
+{
+  @apply p-4 text-center reveal-3
+}
+
+section
+{
+  @apply grid max-w-2xl lg:max-w-7xl grid-cols-1 mx-auto py-7 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4
+}
+
+section > div
+{
+  @apply bg-white shadow 
+}
+
+.poubelle
+{
+  @apply mt-1 ml-auto text-xl font-bold text-gray-900
+}
+
+.modal-container
+{
+  @apply fixed w-full mx-auto z-50 invisible ;
+  top: 50%;
+}
+
+.modal-container.active
+{
+  @apply visible;
+  transition: visibility 0s;
+}
+
+.overlay
+{
+  @apply opacity-0 w-full h-full bg-gray-700 ;
+  transition: opacity 0.4s 0.2s ease-out; 
+}
+
+.modal-container.active .overlay
+{
+  @apply opacity-100;
+  transition: opacity 0.4s 0.2s;
+
+}
+
+.close-modal
+{
+  @apply p-1.5 border-none rounded absolute text-2xl top-3 right-3 cursor-pointer bg-red-600 text-white
+}
+.modal
+{
+  @apply  opacity-0 w-96 p-32 bg-white rounded; 
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  transition: opacity 0.4s ease-out,
+  transform 0.4s ease-out
+}
+
+.modal-container.active .modal
+{
+  @apply opacity-100;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease-out,
+  transform 0.4s 0.2 ease-out
+
+}
+
+.text-img:md
+{
+  @apply p-5 relative top-10
+}
+.text-img:lg
+{
+  @apply p-10 relative top-10
+}
+
+
+#droit
+{
+    @apply absolute w-10 h-10 left-0 opacity-80;
+    top: 160px;
+    transition: all 0.3s ease;
+}
+#droit:hover
+{
+    transform: scale(1.1);
+    opacity: 100;
+    transition: all 0.3s ease;
+}
+
+.photo
+{
+
+  width: 1000px;
+  display: inline-block; /*on maintien les elt sur la mm ligne*/
+  height: 400px;
+  background-size: cover;
+}
+
+.nav-bar
+{
+    width: 1000px;
+    height: 400px;
+    display: inline-block;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+
+#gauche
+{
+    @apply absolute w-10 h-10 right-0 opacity-80;
+    top: 160px;
+    transition: all 0.3s ease;
+}
+#gauche:hover
+{
+  transform: scale(1.1);
+  opacity: 100;
+  transition: all 0.3s ease;
+}
+
+@layer base{
+  .text-treizas
+  {
+    @apply text-3xl font-bold mt-4 ;
+  }
+}
+
+@layer components
+{
+  .nav-bar
+  {
+    @apply 	p-5 flex justify-around mx-auto flex-wrap ;
+  }
+
+  .text-img
+  {
+     @apply text-gray-100  relative top-32 ml-8 text-center leading-8 min-w-full
+  }
+  .text-img > h1{
+    @apply text-2xl
+  }
+
+  .div-select-nav-bar
+  {
+    @apply flex mt-14 -ml-48 -translate-y-full -z-10 absolute top-full;
+  }
+  .div-select-nav-bar:md
+  {
+    @apply static;
+  }
+
+  .select-nav-bar
+  {
+    @apply border-solid border-2 w-36 h-10 font-bold text-xl font-poppins;
+  }
+
+  .select-option
+  {
+    @apply font-bold ;
+  }
+
+  .nav-input
+  {
+    @apply w-80 h-10 border-solid border-2;
+  }
+}
+
+ .etoile
+ {
+   @apply w-5 h-5;
+
+ }/*
+
+ /* .shoose1
+ {
+   @apply w-8 rounded-lg h-7;
+ } */
+
+.cercle
+ {
+   @apply  ml-5;
+ }
+ 
+
+
+[class*="reveal-"],.reveal   /*je veux que tu me selectionne toute les classe qui conmennce part "reveal-"*/
+{
+  /* opacity-0 permet de rendre un elt invisible */
+  /* -translate-y-10 permet de mettre un peti decalage*/
+  @apply opacity-0 translate-y-10
+}
+
+.reveal-visible
+{
+  @apply opacity-100 translate-y-0;
+  transition: 2s cubic-bezier(.5, 0,0,1);
+}  
+
+.reveal-1
+{
+  @apply delay-100;
+}
+
+.reveal-2
+{
+  @apply delay-500
+}
+.reveal-3
+{
+  @apply delay-1000
+}
+
+.reveal-1:md {
+  opacity: 0;
+}

@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body
+{
+    @apply bg-gray-400 leading-6 p-10;
+    background: linear-gradient(45deg, #f37646, #f3e946) center center no-repeat;
+}
+.flow-container > h1
+{
+    @apply font-bold text-3xl mb-5
+}
+
+.container
+{
+    @apply grid gap-y-10
+}
+
+.flow-container
+{
+    @apply bg-white rounded ;
+    width: 30%;
+}
+img
+{
+    @apply min-w-full h-60
+}

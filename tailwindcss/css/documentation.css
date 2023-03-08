@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input
+{
+    @apply border shadow-inner py-2 px-3 text-gray-700 w-full;
+}
+

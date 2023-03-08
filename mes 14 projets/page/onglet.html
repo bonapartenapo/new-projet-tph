@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onglet</title>
+    <link rel="stylesheet" href="../tailwindcss/css/main.css">
+    <script src="../js/onglet.js" defer></script>
+</head>
+<body class="body-onglet">
+    <div class="tab">
+        <button class="button" id="btn" onclick="openOnglet(event, 'Home')">Home</button>
+        <button class="button" id="btn" onclick="openOnglet(event, 'Contact')">Contact</button>
+        <button class="button" id="btn" onclick="openOnglet(event, 'Reservation')">Reservation</button>
+        <button class="button" id="btn" onclick="openOnglet(event, 'Boutique')">Boutique</button>
+    </div>
+
+    <div class="tabcontent" id="Home">
+        <h3 class ="h3-onglet">Home</h3>
+        <p>Bienvenue sur la page Home</p>
+        <div class="picture">
+            <img src="/img/onglet/img1.jpg" alt="Home">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Contact">
+        <h3 class ="h3-onglet">Contact</h3>
+        <p>Bienvenue sur la page Contact</p>
+        <div class="picture">
+            <img src="/img/onglet/img2.jpg" alt="Contact">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Reservation">
+        <h3 class ="h3-onglet">Reservation</h3>
+        <p>Bienvenue sur la page Reservation</p>
+        <div class="picture">
+            <img src="/img/onglet/img3.jpg" alt="Reservation">
+        </div>
+    </div>
+
+    <div class="tabcontent" id="Boutique">
+        <h3 class ="h3-onglet">Boutique</h3>
+        <p>Bienvenue sur la page Boutique</p>
+        <div class="picture">
+            <img src="/img/onglet/img4.jpg" alt="Boutique">
+        </div>
+    </div>
+</body>
+</html>

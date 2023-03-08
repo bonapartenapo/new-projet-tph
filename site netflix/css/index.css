@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root
+{
+    --primary-color: #e50914;
+}
+
+*{
+    @apply box-border m-0 p-0
+}
+
+body
+{
+    @apply font-serif antialiased bg-black text-gray-500 
+}
+ul
+{
+    @apply list-none
+}
+h1,h2,h3,h4,a
+{
+    @apply text-white
+}
+
+p
+{
+    @apply m-2 
+}
+img
+{
+    @apply w-full
+}
+
+.showcase
+{
+    @apply w-full h-96 relative;
+    background: url('../images/bg.jpg');
+}
+
+
+

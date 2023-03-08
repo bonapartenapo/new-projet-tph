@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*
+{
+    @apply m-0 p-0 box-border
+}
+
+.body-onglet
+{
+    @apply bg-blue-500;
+    font-family: 'Roboto', sans-serif;
+    
+    /* on centre avec la position absolut
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    
+}
+
+.picture
+{
+    @apply m-5;
+    width: 450px;
+    height: 450px;
+}
+.picture img
+{
+    /*object-cover permet de faire recouvrir une img dans une zone*/
+    @apply w-full h-full object-cover 
+}
+
+/** tab css*/
+.tab
+{
+    @apply overflow-hidden bg-blue-500
+}
+
+/** style des btn de tab*/
+.tab button
+{
+    /* outline permet de modifier la lageur de la bodure d'un elet*/
+    @apply bg-inherit float-left  outline-0 text-white cursor-pointer px-10 py-5 duration-200 text-xl
+}
+.tab button:hover
+{
+    @apply bg-blue-700
+}
+.tab button.active
+{
+    @apply bg-blue-400
+}
+
+.tabcontent
+{
+    @apply  text-white flex-col p-10;
+    animation: animation 2s ease-out;
+    display: none;
+}
+
+/*animatio*/
+@keyframes animation {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+
+.h3-onglet
+{
+    @apply text-6xl uppercase  #{!important};
+ 
+}
